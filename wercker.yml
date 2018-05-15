@@ -1,7 +1,6 @@
 box: node
 build:
   steps:
-    - npm-install
     - script:
         name: install zip lib
         code: |
