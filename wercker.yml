@@ -20,5 +20,6 @@ build:
         IDENTIFIER: $IDENTIFIER
         application_name: $WERCKER_GIT_OWNER
         application_type: ruby
+        repository: dockerhub
         file: ruby_fighter-0.0.1.$OPC_USERNAME.zip
         subscription_type: Hourly
