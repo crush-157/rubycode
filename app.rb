@@ -5,6 +5,10 @@ require 'sequel'
 client = HTTPClient.new
 p client.get("http://ip.jsontest.com").content
 
+get '/' do
+  erb :home
+end
+
 def db
   @db ||= Sequel.connect(
   'mysql2://' + ENV.fetch('MYSQLCS_CONNECT_STRING',
@@ -14,8 +18,15 @@ def db
   )
 end
 
-ds = db["SELECT * FROM SampleTable"]
-ds.each {|r| puts "#{r} <br/>" }
+begin
+  ds = db["SELECT * FROM SampleTable"]
+  ds.each {|r| puts "#{r} <br/>" }
+rescue
+      p 'Could not connect to database' 
+ensure 
+     
+end
+
 
 __END__
 @@home
