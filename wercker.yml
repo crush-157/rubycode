@@ -9,7 +9,8 @@ build:
     - script:
         name: zip files
         code: |
-          zip -r -y ruby_fighter-0.0.1.$OPC_USERNAME.zip .
+          mkdir target
+          zip -r -y target/ruby_fighter-0.0.1.$OPC_USERNAME.zip .
           ls
     - linushak/oracle-accs-deploy:
         opc_user: $OPC_USERNAME
