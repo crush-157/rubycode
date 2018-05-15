@@ -4,5 +4,6 @@
   },
   "command": "bash ./install_and_run.sh",
   "release": {},
+  "startupTime": "600",
   "notes": "Ruby figher"
 }
