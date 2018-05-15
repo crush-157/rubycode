@@ -2,7 +2,7 @@
   "runtime":{
     "majorVersion":"2.4.1"
   },
-  "command": "ruby app.rb",
+  "command": "bash ./install_and_run.sh",
   "release": {},
-  "notes": "Ruby Hello World"
+  "notes": "Ruby figher"
 }
